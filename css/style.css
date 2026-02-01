@@ -195,7 +195,7 @@ a:hover, button:hover {
   transform: scale(1.05);
 }
 
-/*11. Animations & accessibility/
+/*11. Animations & accessibility*/
 
 /* simple fade-in and float animations */
 @keyframes fadeIn {
