@@ -6,6 +6,21 @@ Assignment: CSS Portfolio Page Assignment
 Description: External CSS for HTML Portfolio
 */
 
+/*
+Table of contents
+1. Reset & Box-sizing
+2. CSS variables (design tokens)
+3. Typography & base layout
+4. Navigation (Flexbox)
+5. Sections & spacing
+6. Images & figures
+7. Projects grid (CSS Grid)
+8. Tables
+9. Forms
+10. Media queries & responsive
+11. Animations & accessibility
+*/
+
 /* css reset and box sizing*/
 * {
   margin: 0;
@@ -36,15 +51,16 @@ Description: External CSS for HTML Portfolio
 
   /* Shadows */
   --shadow-default: 0 2px 6px rgba(0, 0, 0, 0.15);
+
   /* Spacing */
   --space-xs: 4px;
   --space-sm: 8px;
   --space-md: 16px;
   --space-lg: 32px;
+}
 
-
-  /* typography layout*/
-  body {
+/* typography layout */
+body {
   font-family: var(--font-main);
   font-size: var(--font-size-base);
   background-color: var(--color-bg);
@@ -66,7 +82,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* flexbox*/
+/* flexbox */
 nav ul {
   display: flex;
   justify-content: center;
@@ -82,26 +98,26 @@ nav a {
   font-weight: bold;
 }
 
-/* spacing for sections*/
+/* spacing for sections */
 section {
   margin-top: var(--space-lg);
   padding: var(--space-md);
 }
 
-/*images*/
-
+/* images */
 img {
   max-width: 100%;
   height: auto;
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-default);
+  display: block;
 }
 
 figure {
   text-align: center;
 }
 
-/* this is to make project section look good.*/
+/* projects grid */
 #projects {
   display: grid;
   grid-template-columns: 1fr;
@@ -114,7 +130,7 @@ figure {
   }
 }
 
-/*make tables look better*/
+/* make tables look better */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -129,7 +145,7 @@ tbody tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-/* make contact area better*/
+/* make contact area better */
 form {
   display: flex;
   flex-direction: column;
@@ -140,6 +156,7 @@ input, textarea {
   padding: var(--space-sm);
   border-radius: var(--radius-sm);
   border: 1px solid #ccc;
+  font: inherit;
 }
 
 button {
@@ -149,13 +166,14 @@ button {
   border: none;
   border-radius: var(--radius-sm);
   cursor: pointer;
+  font-weight: 700;
 }
 
 button:hover {
   background-color: var(--color-secondary);
 }
 
-/* media queries*/
+/* media queries */
 @media (max-width: 600px) {
   nav ul {
     flex-direction: column;
@@ -167,13 +185,51 @@ button:hover {
     padding: var(--space-lg);
   }
 }
-  
-/* transitions*/
+
+/* transitions */
 a, button {
-  transition: 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 a:hover, button:hover {
   transform: scale(1.05);
 }
+
+/*11. Animations & accessibility/
+
+/* simple fade-in and float animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* subtle float for header title */
+header h1 {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* fade-in for project cards */
+#projects article {
+  animation: fadeIn 420ms ease both;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* Larger breakpoint: small desktop */
+@media (min-width: 1024px) {
+  #projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  body {
+    padding: var(--space-lg);
+  }
 }
