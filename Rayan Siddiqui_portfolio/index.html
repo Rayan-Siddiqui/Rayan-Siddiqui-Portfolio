@@ -1,0 +1,225 @@
+<!-- 
+ Rayan Siddiqui, 953391424,
+ IST 256, HTML5 Porfolio Assignment, Janauary 26, 2026 -->
+
+<!-- Make sure it is HTML 5-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rayan Siddiqui">
+    <meta name="description" content="My Portfolio created with HTML5 to share my experience.">
+
+    <title>HTML5 Portfolio for Rayan Siddiqui With Info About Myself.</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* internal css for specific page tweaks*/
+        body { font-family: Arial, sans-serif; margin: 10px; }
+         header, footer { text-align: center; }
+         nav ul { list-style: none; padding: 0; }
+         nav a { text-decoration: none; margin-right: 10px; }
+        table, th, td { border: 1px solid #000; border-collapse: collapse; padding: 4px; }
+        figure { margin: 5px 0; }
+    </style>
+
+
+ 
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center;">Rayan Siddiqui</h1>
+        <p>2nd Year Cybersecurity Major at <abbr title="The Pennsylvania State University">PSU</abbr>.</p>
+
+        <figure>
+            <img src="images/htmlpic1.jpeg" alt="Rayan Siddiqui professional photo" width="120" height="120" loading="lazy">
+            <!-- figcaption optional here -->
+        </figure>
+    </header>
+    <!-- navigation-->
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#multimedia">Multimedia</a></li>
+
+            
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <main>
+        <!-- About section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <article>
+                <h3>Introduction</h3>
+                <p>Hello, I am currently in my 2nd year at Pennstate as a Cybersecurity Major looking to get hands on experience in the cybersecurity field.</p>
+            </article>
+            <article>
+                <h3>Hobbies</h3>
+                <p>I like Watching education Documentaries, learning about cybersecurity tools, and travelling.</p>
+            </article>
+            <details>
+                <summary>More About My Hobbies</summary>
+                <p>I enjoy watching educational documentaries, exploring cybersecurity tools, and travelling to new places like Egypt.</p>
+            </details>
+
+        </section>
+
+        <!-- Multimedia-->
+        <section id="multimedia">
+            <h2>Multimedia</h2>
+
+            <!-- First image: your photo -->
+            <figure>
+                <img src="images/htmlpic1.jpeg" alt="Photo of me" width="150" height="150" loading="lazy">
+            </figure>
+
+            <!-- Second image: Egypt trip -->
+            <figure>
+                <img src="images/htmlpic2.jpeg" alt="Visiting Egypt" width="300" height="300" loading="lazy">
+                <figcaption>A Picture I took in Egypt</figcaption>
+            </figure>
+        </section>
+
+
+        <!-- Projects -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <article>
+                <h3>Network Topology</h3>
+                <p>I created a Network Topology for a class project. </p>
+                <ol>
+                    <li>researched specific switches and devices to use</li>
+                    <li>designed a topology</li>
+                    <li>figured out where each device would go in the topology</li>
+                </ol>
+            </article>
+            <article>
+                <h3>MySQL Database</h3>
+                <p>I created and organized a data into a Database about hospital records.</p>
+            </article>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <article>
+                <h3>Technical Skills</h3>
+                <p>Python, Java, HTML5, MySQL, Wireshark.</p>
+            </article>
+
+            <!-- Table-->
+            <table>
+                <caption>Skills and Proficiency Levels</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Skill</th>
+                        <th scope="col">Proficiency</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Python</td>
+                        <td>Beginner</td>
+                    </tr>
+                    <tr>
+                        <td>Java</td>
+                        <td>Beginner</td>
+                    </tr>
+                    <tr>
+                        <td>HTML5</td>
+                        <td>Beginner</td>
+                    </tr>
+                    <tr>
+                        <td>MySQL</td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <td>Wireshark</td>
+                        <td>Beginner</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <dl>
+                <dt>Python</dt>
+                <dd>Beginner programming language used to create basic games with user interaction.</dd>
+    
+                <dt>MySQL</dt>
+                <dd>Created Databases and imported Data to the right tables.</dd>
+    
+                <dt>Wireshark</dt>
+                <dd>Beginner network protocol analyzer for monitoring traffic.</dd>
+            </dl>
+
+
+            <article>
+                <h3>Other Skills</h3>
+                <p>Problem-solving, teamwork, communication, critical thinking.</p>
+            </article>
+
+            
+        </section>
+
+    
+
+        <aside>
+            <h2>Quick Facts</h2>
+            <ul>
+                <li>Age: 19</li>
+                <li>Hobbies: Sports, Gaming, and travelling</li>
+                <li>Email: <a href="mailto:rms7641@psu.edu">rms7641@psu.edu</a></li>
+                
+
+            </ul>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/rayan-siddiqui/" target="_blank" rel="noopener noreferrer">My LinkedIn</a></p>
+        </aside>
+
+        <section id="contact">
+            <h2>Contact Info</h2>
+            <form action="mailto:rms7641@psu.edu" method="post">
+                <fieldset>
+                    <legend>Send a message here.</legend>
+
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Send</button>
+                </fieldset>
+            </form>
+        </section>
+
+
+
+        
+
+
+
+    </main>
+    
+
+    <footer>
+        <p>&copy; 2026 Rayan Siddiqui. All rights reserved.</p>
+        <p>Contact: <a href="mailto:rms7641@psu.edu">rms7641@psu.edu</a></p>
+        <p>Last updated: <time datetime="2026-01-26">January 26, 2026</time></p>
+    </footer>
+
+</body>
+</html>
+
+
