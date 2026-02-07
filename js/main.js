@@ -54,3 +54,27 @@ toggleContactBtn.addEventListener("click", () => {
     contactSection.style.display = "none";
   }
 });
+
+// Toggle button for multimedia
+const toggleMultimediaBtn = document.getElementById("toggle-multimedia");
+const multimediaSection = document.getElementById("multimedia");
+
+toggleMultimediaBtn.addEventListener("click", () => {
+  if (multimediaSection.style.display === "none") {
+    multimediaSection.style.display = "block";
+  } else {
+    multimediaSection.style.display = "none";
+  }
+});
+
+// Toggle button for quick facts
+const toggleQuickFactsBtn = document.getElementById("toggle-quickfacts");
+const quickFacts = document.querySelector("aside");
+
+toggleQuickFactsBtn.addEventListener("click", () => {
+  if (quickFacts.style.display === "none") {
+    quickFacts.style.display = "block";
+  } else {
+    quickFacts.style.display = "none";
+  }
+});
