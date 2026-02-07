@@ -42,3 +42,15 @@ toggleAboutBtn.addEventListener("click", () => {
     aboutSection.style.display = "none";
   }
 });
+
+// Toggle button for contact
+const toggleContactBtn = document.getElementById("toggle-contact");
+const contactSection = document.getElementById("contact");
+
+toggleContactBtn.addEventListener("click", () => {
+  if (contactSection.style.display === "none") {
+    contactSection.style.display = "block";
+  } else {
+    contactSection.style.display = "none";
+  }
+});
