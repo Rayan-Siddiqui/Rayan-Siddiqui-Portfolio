@@ -78,3 +78,17 @@ toggleQuickFactsBtn.addEventListener("click", () => {
     quickFacts.style.display = "none";
   }
 });
+
+// Contact message feedback
+const contactForm = document.querySelector("#contact form");
+const formFeedback = document.getElementById("form-feedback");
+
+contactForm.addEventListener("submit", (event) => {
+  event.preventDefault(); // prevent default submission (for demo/testing)
+  
+  // Show confirmation message
+  formFeedback.style.display = "block";
+  // Reset form fields
+  contactForm.reset();
+});
+
