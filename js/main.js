@@ -7,7 +7,7 @@ Submission Date: 02/07/2025
 Portfolio URL: https://rayan-siddiqui.github.io/Rayan-Siddiqui-Portfolio/
 */
 
-// Toggle Skills section visibility
+// Toggle button for Skills
 const toggleSkillsBtn = document.getElementById("toggle-skills");
 const skillsSection = document.getElementById("skills");
 
@@ -19,3 +19,14 @@ toggleSkillsBtn.addEventListener("click", () => {
   }
 });
 
+// Toggle button for Projects
+const toggleProjectsBtn = document.getElementById("toggle-projects");
+const projectsSection = document.getElementById("projects");
+
+toggleProjectsBtn.addEventListener("click", () => {
+  if (projectsSection.style.display === "none") {
+    projectsSection.style.display = "block";
+  } else {
+    projectsSection.style.display = "none";
+  }
+});
