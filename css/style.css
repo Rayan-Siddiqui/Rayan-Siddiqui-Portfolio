@@ -117,6 +117,14 @@ figure {
   text-align: center;
 }
 
+/* Center profile picture in header */
+header figure {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 10px; /* centers and adds a small bottom margin */
+}
+
+
 /* projects grid */
 #projects {
   display: grid;

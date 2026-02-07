@@ -30,3 +30,15 @@ toggleProjectsBtn.addEventListener("click", () => {
     projectsSection.style.display = "none";
   }
 });
+
+// Toggle button for About
+const toggleAboutBtn = document.getElementById("toggle-about");
+const aboutSection = document.getElementById("about");
+
+toggleAboutBtn.addEventListener("click", () => {
+  if (aboutSection.style.display === "none") {
+    aboutSection.style.display = "block";
+  } else {
+    aboutSection.style.display = "none";
+  }
+});
