@@ -31,7 +31,7 @@ toggleProjectsBtn.addEventListener("click", () => {
   }
 });
 
-// Toggle button for About
+/* Toggle button for About. It is commented out because Bootstrap is conflicting
 const toggleAboutBtn = document.getElementById("toggle-about");
 const aboutSection = document.getElementById("about");
 
@@ -41,7 +41,7 @@ toggleAboutBtn.addEventListener("click", () => {
   } else {
     aboutSection.style.display = "none";
   }
-});
+});*/
 
 // Toggle button for contact
 const toggleContactBtn = document.getElementById("toggle-contact");

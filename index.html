@@ -67,23 +67,56 @@
     <!-- Main -->
     <main>
         <!-- About section -->
-        <button id="toggle-about">Toggle About</button>
-        <section id="about">
-            <h2>About Me</h2>
-            <article>
-                <h3>Introduction</h3>
-                <p>Hello, I am currently in my 2nd year at Pennstate as a Cybersecurity Major looking to get hands on experience in the cybersecurity field.</p>
-            </article>
-            <article>
-                <h3>Hobbies</h3>
-                <p>I like Watching education Documentaries, learning about cybersecurity tools, and travelling.</p>
-            </article>
-            <details>
-                <summary>More About My Hobbies</summary>
-                <p>I enjoy watching educational documentaries, exploring cybersecurity tools, and travelling to new places like Egypt.</p>
-            </details>
+        <!-- About section (Bootstrap card + collapse) -->
+    <div class="mb-3 text-center">
+        <button class="btn btn-primary" type="button"
+            data-bs-toggle="collapse" data-bs-target="#aboutCollapse"
+            aria-expanded="true" aria-controls="aboutCollapse">
+        Toggle About
+    </button>
+    </div>
 
-        </section>
+    <div class="collapse show" id="aboutCollapse">
+    <section id="about" class="card card-body mb-4">
+        <div class="row g-3 align-items-center">
+        <!-- Left: portrait -->
+        <div class="col-12 col-md-4 text-center">
+            <figure class="mb-0">
+            <img src="images/htmlpic1.jpeg"
+                alt="Rayan Siddiqui professional photo"
+                class="img-fluid rounded-circle" style="max-width:140px;">
+            </figure>
+        </div>
+
+        <!-- Right: content -->
+        <div class="col-12 col-md-8">
+            <h2 class="h4">About Me</h2>
+
+            <article class="mb-3">
+            <h3 class="h6 mb-1">Introduction</h3>
+            <p class="mb-0">
+                Hello, I am currently in my 2nd year at Penn State as a Cybersecurity major looking to get hands-on experience in the cybersecurity field.
+            </p>
+            </article>
+
+            <article class="mb-2">
+            <h3 class="h6 mb-1">Hobbies</h3>
+            <p class="mb-0">
+                I enjoy watching educational documentaries, learning about cybersecurity tools, and travelling.
+            </p>
+            </article>
+
+            <details class="mt-2">
+            <summary class="small">More About My Hobbies</summary>
+            <p class="mt-2 mb-0">
+                I enjoy watching educational documentaries, exploring cybersecurity tools, and travelling to new places like Egypt.
+            </p>
+            </details>
+        </div>
+        </div>
+    </section>
+    </div>
+
 
         <!-- Multimedia-->
         <button id="toggle-multimedia">Toggle Multimedia</button>
