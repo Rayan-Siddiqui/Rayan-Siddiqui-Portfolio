@@ -7,7 +7,44 @@ Submission Date: 02/07/2025
 Portfolio URL: https://rayan-siddiqui.github.io/Rayan-Siddiqui-Portfolio/
 */
 
-// Toggle button for Skills
+// -- Contact form: show Bootstrap toast on submit --
+document.addEventListener('DOMContentLoaded', () => {
+  const contactForm = document.getElementById('contactForm');
+  const toastEl = document.getElementById('liveToast');
+  let contactToast;
+
+  if (toastEl) {
+    contactToast = new bootstrap.Toast(toastEl);
+  }
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault(); // for demo: prevent actual submission
+      if (contactForm.checkValidity()) {
+        if (contactToast) contactToast.show();
+        contactForm.reset();
+      } else {
+        contactForm.reportValidity();
+      }
+    });
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Toggle button for Skills
 const toggleSkillsBtn = document.getElementById("toggle-skills");
 const skillsSection = document.getElementById("skills");
 
@@ -41,7 +78,7 @@ toggleAboutBtn.addEventListener("click", () => {
   } else {
     aboutSection.style.display = "none";
   }
-});*/
+});
 
 // Toggle button for contact
 const toggleContactBtn = document.getElementById("toggle-contact");
@@ -90,5 +127,5 @@ contactForm.addEventListener("submit", (event) => {
   formFeedback.style.display = "block";
   // Reset form fields
   contactForm.reset();
-});
+});*/
 
