@@ -119,107 +119,122 @@
 
 
         <!-- Multimedia-->
-        <button id="toggle-multimedia">Toggle Multimedia</button>
-        <section id="multimedia">
-            <h2>Multimedia</h2>
+        <!-- MULTIMEDIA -->
+        <section id="multimedia" class="mb-4">
+            <div class="text-center mb-2">
+                <button class="btn btn-primary" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#multimediaCollapse"
+                    aria-expanded="true" aria-controls="multimediaCollapse">
+                    Toggle Multimedia
+                </button>
+            </div>
 
-            <!-- First image: your photo -->
-            <figure>
-                <img src="images/htmlpic1.jpeg" alt="Photo of me" width="150" height="150" loading="lazy">
-            </figure>
-
-            <!-- Second image: Egypt trip -->
-            <figure>
-                <img src="images/htmlpic2.jpeg" alt="Visiting Egypt" width="300" height="300" loading="lazy">
-                <figcaption>A Picture I took in Egypt</figcaption>
-            </figure>
+            <div class="collapse show" id="multimediaCollapse">
+                <div class="card card-body">
+                    <h2 class="h4">Multimedia</h2>
+                    <div class="row gy-3">
+                        <div class="col-12 col-md-6 text-center">
+                            <figure class="mb-0">
+                                <img src="images/htmlpic1.jpeg" alt="Photo of me" class="img-fluid" style="max-width:200px;">
+                            </figure>
+                        </div>
+                        <div class="col-12 col-md-6 text-center">
+                            <figure class="mb-0">
+                                <img src="images/htmlpic2.jpeg" alt="Visiting Egypt" class="img-fluid" style="max-width:300px;">
+                                <figcaption class="small">A Picture I took in Egypt</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+
 
 
         <!-- Projects -->
-        <button id="toggle-projects">Toggle Projects</button>
-        <section id="projects">
-            <h2>Projects</h2>
-            <article>
-                <h3>Network Topology</h3>
-                <p>I created a Network Topology for a class project. </p>
-                <ol>
-                    <li>researched specific switches and devices to use</li>
-                    <li>designed a topology</li>
-                    <li>figured out where each device would go in the topology</li>
-                </ol>
-            </article>
-            <article>
-                <h3>MySQL Database</h3>
-                <p>I created and organized a data into a Database about hospital records.</p>
-            </article>
+        <!-- PROJECTS -->
+        <section id="projects" class="mb-4">
+            <div class="text-center mb-2">
+                <button class="btn btn-primary" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#projectsCollapse"
+                    aria-expanded="true" aria-controls="projectsCollapse">
+                    Toggle Projects
+                </button>
+            </div>
+
+            <div class="collapse show" id="projectsCollapse">
+                <div class="card card-body">
+                    <h2 class="h4">Projects</h2>
+                    <div class="row g-3">
+                        <div class="col-12 col-md-6">
+                            <article class="card h-100 p-3">
+                                <h3>Network Topology</h3>
+                                <p>I created a Network Topology for a class project.</p>
+                                <ol>
+                                    <li>researched specific switches and devices to use</li>
+                                    <li>designed a topology</li>
+                                    <li>figured out where each device would go in the topology</li>
+                                </ol>
+                            </article>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <article class="card h-100 p-3">
+                                <h3>MySQL Database</h3>
+                                <p>I created and organized data into a database about hospital records.</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+        <!-- SKILLS -->
+<section id="skills" class="mb-4">
+  <div class="text-center mb-2">
+    <button class="btn btn-primary" type="button"
+            data-bs-toggle="collapse" data-bs-target="#skillsCollapse"
+            aria-expanded="true" aria-controls="skillsCollapse">
+      Toggle Skills
+    </button>
+  </div>
 
-        <!-- Skills -->
-        <button id="toggle-skills">Toggle Skills</button>
-        <section id="skills">
-            <h2>Skills</h2>
-            <article>
-                <h3>Technical Skills</h3>
-                <p>Python, Java, HTML5, MySQL, Wireshark.</p>
-            </article>
+  <div class="collapse show" id="skillsCollapse">
+    <div class="card card-body">
+      <h2 class="h4">Skills</h2>
 
-            <!-- Table-->
-            <table>
-                <caption>Skills and Proficiency Levels</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Skill</th>
-                        <th scope="col">Proficiency</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Python</td>
-                        <td>Beginner</td>
-                    </tr>
-                    <tr>
-                        <td>Java</td>
-                        <td>Beginner</td>
-                    </tr>
-                    <tr>
-                        <td>HTML5</td>
-                        <td>Beginner</td>
-                    </tr>
-                    <tr>
-                        <td>MySQL</td>
-                        <td>Intermediate</td>
-                    </tr>
-                    <tr>
-                        <td>Wireshark</td>
-                        <td>Beginner</td>
-                    </tr>
-                </tbody>
-            </table>
+      <article class="mb-3">
+        <h3 class="h6">Technical Skills</h3>
+        <p class="mb-0">Python, Java, HTML5, MySQL, Wireshark.</p>
+      </article>
 
-            <dl>
-                <dt>Python</dt>
-                <dd>Beginner programming language used to create basic games with user interaction.</dd>
-    
-                <dt>MySQL</dt>
-                <dd>Created Databases and imported Data to the right tables.</dd>
-    
-                <dt>Wireshark</dt>
-                <dd>Beginner network protocol analyzer for monitoring traffic.</dd>
-            </dl>
+      <div class="table-responsive mb-3">
+        <table class="table table-striped">
+          <caption>Skills and Proficiency Levels</caption>
+          <thead>
+            <tr><th>Skill</th><th>Proficiency</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Python</td><td>Beginner</td></tr>
+            <tr><td>Java</td><td>Beginner</td></tr>
+            <tr><td>HTML5</td><td>Beginner</td></tr>
+            <tr><td>MySQL</td><td>Intermediate</td></tr>
+            <tr><td>Wireshark</td><td>Beginner</td></tr>
+          </tbody>
+        </table>
+      </div>
 
+      <dl class="row">
+        <dt class="col-sm-3">Python</dt><dd class="col-sm-9">Beginner programming language used to create basic games with user interaction.</dd>
+        <dt class="col-sm-3">MySQL</dt><dd class="col-sm-9">Created Databases and imported Data to the right tables.</dd>
+        <dt class="col-sm-3">Wireshark</dt><dd class="col-sm-9">Beginner network protocol analyzer for monitoring traffic.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
 
-            <article>
-                <h3>Other Skills</h3>
-                <p>Problem-solving, teamwork, communication, critical thinking.</p>
-            </article>
-
-            
-        </section>
 
     
         <!-- Quick Facts Section-->
-         <button id="toggle-quickfacts">Toggle Quick Facts</button>
+        <button id="toggle-quickfacts">Toggle Quick Facts</button>
         <aside>
             <h2>Quick Facts</h2>
             <ul>
@@ -278,7 +293,6 @@
 
     <!-- Add Bootsrap JS Bundle-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
     <script src="js/main.js"></script>
     
     
