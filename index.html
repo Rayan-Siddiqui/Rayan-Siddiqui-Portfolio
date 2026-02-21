@@ -1,302 +1,301 @@
 <!-- 
  Rayan Siddiqui, 953391424,
- IST 256, HTML5 Porfolio Assignment, Janauary 26, 2026 -->
+ IST 256, HTML5 Portfolio Assignment, January 26, 2026 -->
 
-<!-- Make sure it is HTML 5-->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Meta Tags-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Rayan Siddiqui">
-    <meta name="description" content="My Portfolio created with HTML5 to share my experience.">
+  <!-- Meta Tags-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Rayan Siddiqui">
+  <meta name="description" content="My Portfolio created with HTML5 to share my experience.">
 
-    <title>HTML5 Portfolio for Rayan Siddiqui With Info About Myself.</title>
+  <title>HTML5 Portfolio for Rayan Siddiqui With Info About Myself.</title>
 
-    <!-- Add Bootstrap CSS-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <link rel="stylesheet" href="css/style.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-        /* internal css for specific page tweaks*/
-        body { font-family: Arial, sans-serif; margin: 10px; }
-         header, footer { text-align: center; }
-         nav ul { list-style: none; padding: 0; }
-         nav a { text-decoration: none; margin-right: 10px; }
-        table, th, td { border: 1px solid #000; border-collapse: collapse; padding: 4px; }
-        figure { margin: 5px 0; }
-    </style>
+  <link rel="stylesheet" href="css/style.css">
 
-
- 
+  <style>
+    /* Internal page tweaks */
+    body { font-family: Arial, sans-serif; margin: 10px; }
+    header, footer { text-align: center; }
+    nav ul { list-style: none; padding: 0; }
+    nav a { text-decoration: none; margin-right: 10px; }
+    table, th, td { border: 1px solid #000; border-collapse: collapse; padding: 4px; }
+    figure { margin: 5px 0; }
+    /* Scroll-to-top button quick inline style for visibility */
+    #scrollTopBtn {
+      position: fixed;
+      right: 1rem;
+      bottom: 1rem;
+      width: 44px;
+      height: 44px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1100;
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <!-- used to center the title-->
-        <h1 style="text-align: center;">Rayan Siddiqui</h1>
-        <p>2nd Year Cybersecurity Major at <abbr title="The Pennsylvania State University">PSU</abbr>.</p>
-        <!-- Top header photo removed - kept only About section photo -->
-    </header>
-    <!-- navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" aria-label="Main Navigation">
-        <div class="container">
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+  <header>
+    <h1 style="text-align: center;">Rayan Siddiqui</h1>
+    <p>2nd Year Cybersecurity Major at <abbr title="The Pennsylvania State University">PSU</abbr>.</p>
+    <!-- Top header photo removed - kept only About section photo -->
+  </header>
+
+  <!-- navigation-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" aria-label="Main Navigation">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-center">
+          <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <!-- Theme toggle button as nav item -->
+          <li class="nav-item ms-3">
+            <button id="themeToggle" class="btn btn-sm btn-outline-primary" aria-pressed="false" title="Toggle dark / light">
+              Dark
             </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-            <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <!-- Multimedia nav removed -->
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <!-- Main -->
+  <main>
+    <div class="container py-4"></div>
 
-    <!-- Main -->
-    <main>
-        <div class="container py-4"></div>
-            <!-- About section -->
-            <!-- About section (Bootstrap card + collapse) -->
-        <div class="mb-3 text-center">
-            <button class="btn btn-primary" type="button"
-                data-bs-toggle="collapse" data-bs-target="#aboutCollapse"
-                aria-expanded="true" aria-controls="aboutCollapse">
-            Toggle About
-        </button>
-        </div>
-
-        <div class="collapse show" id="aboutCollapse">
-        <section id="about" class="card card-body mb-4">
-            <div class="row g-3 align-items-center">
-            <!-- Left: portrait -->
-            <div class="col-12 col-md-4 text-center">
-                <figure class="mb-0">
-                <img src="images/htmlpic1.jpeg"
-                    alt="Rayan Siddiqui professional photo"
-                    class="img-fluid rounded-circle" style="max-width:140px;">
-                </figure>
-            </div>
-
-            <!-- Right: content -->
-            <div class="col-12 col-md-8">
-                <h2 class="h4">About Me</h2>
-
-                <article class="mb-3">
-                <h3 class="h6 mb-1">Introduction</h3>
-                <p class="mb-0">
-                    Hello, I am currently in my 2nd year at Penn State as a Cybersecurity major looking to get hands-on experience in the cybersecurity field.
-                </p>
-                </article>
-
-                <article class="mb-2">
-                <h3 class="h6 mb-1">Hobbies</h3>
-                <p class="mb-0">
-                    I enjoy watching educational documentaries, learning about cybersecurity tools, and travelling.
-                </p>
-                </article>
-
-                <details class="mt-2">
-                <summary class="small">More About My Hobbies</summary>
-                <p class="mt-2 mb-0">
-                    I enjoy watching educational documentaries, exploring cybersecurity tools, and travelling to new places like Egypt.
-                </p>
-                </details>
-            </div>
-            </div>
-        </section>
-        </div>
-
-
-            <!-- Projects -->
-            <!-- PROJECTS -->
-            <section id="projects" class="mb-4">
-            <!-- Button in its own centered row -->
-                <div class="text-center mb-2">
-                    <button class="btn btn-primary" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#projectsCollapse"
-                        aria-expanded="true" aria-controls="projectsCollapse">
-                        Toggle Projects
-                    </button>
-                </div>
-
-            <!-- Collapse content on the next line, wrapped in a card -->
-                <div class="collapse show" id="projectsCollapse">
-                    <div class="card card-body mx-auto" style="max-width:900px;">
-
-                        <h2 class="h4">Projects</h2>
-
-                        <div class="row g-3">
-                            <div class="col-12 col-md-6">
-                                <article class="card h-100 p-3">
-                                    <h3>Network Topology</h3>
-                                    <p>I created a Network Topology for a class project.</p>
-                                    <ol>
-                                        <li>Researched specific switches and devices to use</li>
-                                        <li>Designed a topology</li>
-                                        <li>Figured out where each device would go in the topology</li>
-                                    </ol>
-                                </article>
-                            </div>
-
-                            <div class="col-12 col-md-6">
-                                <article class="card h-100 p-3">
-                                    <h3>MySQL Database</h3>
-                                    <p>I created and organized data into a database about hospital records.</p>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SKILLS -->
-    <section id="skills" class="mb-4">
-    <div class="text-center mb-2">
-        <button class="btn btn-primary" type="button"
-                data-bs-toggle="collapse" data-bs-target="#skillsCollapse"
-                aria-expanded="true" aria-controls="skillsCollapse">
-        Toggle Skills
-        </button>
+    <!-- About -->
+    <div class="mb-3 text-center">
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#aboutCollapse"
+        aria-expanded="true" aria-controls="aboutCollapse">
+        Toggle About
+      </button>
     </div>
 
-    <div class="collapse show" id="skillsCollapse">
-        <div class="card card-body">
-        <h2 class="h4">Skills</h2>
+    <div class="collapse show" id="aboutCollapse">
+      <section id="about" class="card card-body mb-4">
+        <div class="row g-3 align-items-center">
+          <div class="col-12 col-md-4 text-center">
+            <figure class="mb-0">
+              <img src="images/htmlpic1.jpeg" alt="Rayan Siddiqui professional photo" class="img-fluid rounded-circle"
+                style="max-width:140px;">
+            </figure>
+          </div>
 
-        <article class="mb-3">
+          <div class="col-12 col-md-8">
+            <h2 class="h4">About Me</h2>
+
+            <article class="mb-3">
+              <h3 class="h6 mb-1">Introduction</h3>
+              <p class="mb-0">
+                Hello, I am currently in my 2nd year at Penn State as a Cybersecurity major looking to get hands-on experience in the cybersecurity field.
+              </p>
+            </article>
+
+            <article class="mb-2">
+              <h3 class="h6 mb-1">Hobbies</h3>
+              <p class="mb-0">
+                I enjoy watching educational documentaries, learning about cybersecurity tools, and travelling.
+              </p>
+            </article>
+
+            <details class="mt-2">
+              <summary class="small">More About My Hobbies</summary>
+              <p class="mt-2 mb-0">
+                I enjoy watching educational documentaries, exploring cybersecurity tools, and travelling to new places like Egypt.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Projects -->
+    <section id="projects" class="mb-4">
+      <div class="text-center mb-2">
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#projectsCollapse"
+          aria-expanded="true" aria-controls="projectsCollapse">
+          Toggle Projects
+        </button>
+      </div>
+
+      <div class="collapse show" id="projectsCollapse">
+        <div class="card card-body mx-auto" style="max-width:900px;">
+          <h2 class="h4">Projects</h2>
+
+          <div class="row g-3">
+            <div class="col-12 col-md-6">
+              <article class="card h-100 p-3">
+                <h3>Network Topology</h3>
+                <p>I created a Network Topology for a class project.</p>
+                <ol>
+                  <li>Researched specific switches and devices to use</li>
+                  <li>Designed a topology</li>
+                  <li>Figured out where each device would go in the topology</li>
+                </ol>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <article class="card h-100 p-3">
+                <h3>MySQL Database</h3>
+                <p>I created and organized data into a database about hospital records.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="mb-4">
+      <div class="text-center mb-2">
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#skillsCollapse"
+          aria-expanded="true" aria-controls="skillsCollapse">
+          Toggle Skills
+        </button>
+      </div>
+
+      <div class="collapse show" id="skillsCollapse">
+        <div class="card card-body">
+          <h2 class="h4">Skills</h2>
+
+          <article class="mb-3">
             <h3 class="h6">Technical Skills</h3>
             <p class="mb-0">Python, Java, HTML5, MySQL, Wireshark.</p>
-        </article>
+          </article>
 
-        <div class="table-responsive mb-3">
+          <div class="table-responsive mb-3">
             <table class="table table-striped">
-            <caption>Skills and Proficiency Levels</caption>
-            <thead>
+              <caption>Skills and Proficiency Levels</caption>
+              <thead>
                 <tr><th>Skill</th><th>Proficiency</th></tr>
-            </thead>
-            <tbody>
+              </thead>
+              <tbody>
                 <tr><td>Python</td><td>Beginner</td></tr>
                 <tr><td>Java</td><td>Beginner</td></tr>
                 <tr><td>HTML5</td><td>Beginner</td></tr>
                 <tr><td>MySQL</td><td>Intermediate</td></tr>
                 <tr><td>Wireshark</td><td>Beginner</td></tr>
-            </tbody>
+              </tbody>
             </table>
-        </div>
+          </div>
 
-        <dl class="row">
+          <dl class="row">
             <dt class="col-sm-3">Python</dt><dd class="col-sm-9">Beginner programming language used to create basic games with user interaction.</dd>
             <dt class="col-sm-3">MySQL</dt><dd class="col-sm-9">Created Databases and imported Data to the right tables.</dd>
             <dt class="col-sm-3">Wireshark</dt><dd class="col-sm-9">Beginner network protocol analyzer for monitoring traffic.</dd>
-        </dl>
+          </dl>
         </div>
-    </div>
+      </div>
     </section>
 
+    <!-- Quick Facts -->
+    <div class="text-center mb-2">
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#quickfactsCollapse"
+        aria-expanded="true" aria-controls="quickfactsCollapse">
+        Toggle Quick Facts
+      </button>
+    </div>
 
-        
-            <!-- Quick Facts Section-->
-            <!-- QUICK FACTS -->
-            <div class="text-center mb-2">
-            <button class="btn btn-primary" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#quickfactsCollapse"
-                    aria-expanded="true" aria-controls="quickfactsCollapse">
-                Toggle Quick Facts
-            </button>
-            </div>
+    <div class="collapse show" id="quickfactsCollapse">
+      <aside class="card p-3 mb-4">
+        <h2 class="h5">Quick Facts</h2>
+        <ul class="list-unstyled mb-2">
+          <li><strong>Age:</strong> 19</li>
+          <li><strong>Hobbies:</strong> Sports, Gaming, travelling</li>
+          <li><strong>Email:</strong> <a href="mailto:rms7641@psu.edu">rms7641@psu.edu</a></li>
+        </ul>
+        <p class="mb-0">LinkedIn: <a href="https://www.linkedin.com/in/rayan-siddiqui/" target="_blank" rel="noopener noreferrer">My LinkedIn</a></p>
+      </aside>
+    </div>
 
-            <div class="collapse show" id="quickfactsCollapse">
-            <aside class="card p-3 mb-4">
-                <h2 class="h5">Quick Facts</h2>
-                <ul class="list-unstyled mb-2">
-                <li><strong>Age:</strong> 19</li>
-                <li><strong>Hobbies:</strong> Sports, Gaming, travelling</li>
-                <li><strong>Email:</strong> <a href="mailto:rms7641@psu.edu">rms7641@psu.edu</a></li>
-                </ul>
-                <p class="mb-0">LinkedIn: <a href="https://www.linkedin.com/in/rayan-siddiqui/" target="_blank" rel="noopener noreferrer">My LinkedIn</a></p>
-            </aside>
-            </div>
+    <!-- Contact -->
+    <section id="contact" class="mb-4">
+      <div class="text-center mb-2">
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#contactCollapse"
+          aria-expanded="true" aria-controls="contactCollapse">
+          Toggle Contact
+        </button>
+      </div>
 
+      <div class="collapse show" id="contactCollapse">
+        <div class="card card-body">
+          <h2 class="h4">Contact Info</h2>
 
-            
-            <!-- Contact Section-->
-            <!-- CONTACT -->
-            <section id="contact" class="mb-4">
-            <div class="text-center mb-2">
-                <button class="btn btn-primary" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#contactCollapse"
-                        aria-expanded="true" aria-controls="contactCollapse">
-                Toggle Contact
-                </button>
-            </div>
+          <form id="contactForm" novalidate>
+            <fieldset>
+              <legend class="visually-hidden">Send a message</legend>
 
-            <div class="collapse show" id="contactCollapse">
-                <div class="card card-body">
-                <h2 class="h4">Contact Info</h2>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+              </div>
 
-                <form id="contactForm" novalidate>
-                    <fieldset>
-                    <legend class="visually-hidden">Send a message</legend>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+              </div>
 
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Name:</label>
-                        <input type="text" id="name" name="name" class="form-control" required>
-                    </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message:</label>
+                <!-- added maxlength for character count -->
+                <textarea id="message" name="message" class="form-control" rows="4" required maxlength="300"></textarea>
+                <!-- character count display -->
+                <div id="charCount" class="form-text text-end">0 / 300</div>
+              </div>
 
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email:</label>
-                        <input type="email" id="email" name="email" class="form-control" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message:</label>
-                        <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-success">Send</button>
-                    </fieldset>
-                </form>
-
-                </div>
-            </div>
-            </section>
+              <button type="submit" class="btn btn-success">Send</button>
+            </fieldset>
+          </form>
 
         </div>
-    </main>
-    
-    <!-- Copyright-->
-    <footer>
-        <p>&copy; 2026 Rayan Siddiqui. All rights reserved.</p>
-        <p>Contact: <a href="mailto:rms7641@psu.edu">rms7641@psu.edu</a></p>
-        <p>Last updated: <time datetime="2026-02-21">February 21, 2026</time></p>
-    </footer>
+      </div>
+    </section>
+  </main>
 
-    <!-- Message Received -->
-    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1080">
-    <div id="liveToast" class="toast align-items-center" role="status" aria-live="polite" aria-atomic="true">
-        <div class="d-flex">
+  <!-- Centered Toast (moved from bottom-right to center so it's obvious) -->
+  <div id="toastContainer" aria-live="polite" aria-atomic="true">
+    <div id="liveToast" class="toast align-items-center toast-center" role="status" aria-live="polite" aria-atomic="true">
+      <div class="d-flex">
         <div class="toast-body">
-            Thank you! Your message has been received.
+          Thank you! Your message has been received.
         </div>
         <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-        </div>
+      </div>
     </div>
-    </div>
+  </div>
 
-    <!-- Add Bootsrap JS Bundle-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
-    
-    
+  <!-- Scroll-to-top button -->
+  <button id="scrollTopBtn" class="btn btn-primary" title="Back to top" aria-label="Scroll to top">
+    ↑
+  </button>
 
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Rayan Siddiqui. All rights reserved.</p>
+    <p>Contact: <a href="mailto:rms7641@psu.edu">rms7641@psu.edu</a></p>
+    <p>Last updated: <time datetime="2026-02-21">February 21, 2026</time></p>
+  </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
